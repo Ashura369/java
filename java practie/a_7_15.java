@@ -18,6 +18,10 @@ public class a_7_15 {
             newArr[arr1.length + i] = arr2[i];
         }
 
+        System.out.println(newArr.length); //finds total elements in the array
+        System.out.println(newArr.length - 1); //finds second last element in the array
+        System.out.println(newArr[newArr.length - 1]); //finds last element of the array
+
         // the new array
         for (int i = 0; i < newArr.length; i++) {
             System.out.print(newArr[i]+" ");
