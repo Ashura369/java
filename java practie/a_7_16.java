@@ -23,5 +23,9 @@ public class a_7_16 {
         }
         System.out.println("Largest number is: " + largest);
         System.out.println("Second largest number is: " + secondLargest);
+
+        /*
+            Suppose the current element is smaller than both largest and secondLargest, in that case both the if conditions will be skipped. And value of "i" will increase, and for that i, both the if conditions will be checked.
+        */
     }
 }
