@@ -1,6 +1,6 @@
 // make an array and take numbers as an input, and find the repetation of each number
 import java.util.*;
-public class a_7_10 {
+public class a_7_10_findingTheRepetation {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         System.out.print("ENTER THE NUMBER OF ELEMENTS YOU WANT : ");

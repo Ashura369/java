@@ -1,7 +1,7 @@
 // Find the maximum number in an array
 
 import java.util.*;
-public class a_7_3 {
+public class a_7_3_maximumNum {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,66,7,8,9,10};
         int max = arr[0];

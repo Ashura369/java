@@ -1,6 +1,7 @@
 // merge two arrays into one array
+// a_7_15_meringTwoArrays array
 
-public class a_7_15 {
+public class a_7_15_meringTwoArrays {
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 5, 7};
         int[] arr2 = {2, 4, 6, 8, 10};

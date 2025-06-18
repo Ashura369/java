@@ -1,6 +1,6 @@
 // Calculate the sum of all array elements
 import java.util.*;
-public class a_7_5 {
+public class a_7_5sumOfAllElements {
     public static void main(String[] args) {
         int[] arr={1,2,3,4,5,6,7,8,9,10};
 

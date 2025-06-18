@@ -18,6 +18,30 @@
 import java.util.*;
 public class L_8_0_2DArray {
     public static void main(String[] args) {
-        
+        Scanner input=new Scanner(System.in);
+
+        System.out.print("ENTER THE NUMBER OF ROWS: ");
+        int rows = input.nextInt();
+        System.out.print("ENTER THE NUMBER OF COLUMNS:  ");
+        int columns = input.nextInt();
+        System.out.println("--- ENTER THE 2D ARRAY ---");
+
+        int[][] numbers = new int[rows][columns];
+
+        // input
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                numbers[i][j] = input.nextInt();
+            }
+        }
+
+        // output
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(numbers[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 }

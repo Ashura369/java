@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class a_7_16 {
+public class a_7_16_largestAndSecondLargest {
     public static void main(String[] args) {
         int[] arr = {13, 5, 7, 2, 9, 5, 12, 4, 8, 7, 1, 3, 9, 6, 14, 2, 11, 6, 10, 8};
 

@@ -1,6 +1,8 @@
+
+
 import java.util.Arrays;
 
-public class a_7_12 {
+public class a_7_12_sortingTheArray {
     public static void main(String[] args) {
         int[] arr = {7, 2, 14, 5, 1, 13, 8, 3, 10, 6, 12, 9, 4, 15, 11};
 

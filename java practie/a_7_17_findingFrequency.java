@@ -1,5 +1,5 @@
-// finding frequency of array elements
-public class a_7_17 {
+// finding rrequency of array elements
+public class a_7_17_findingFrequency {
     public static void main(String[] args) {
         int[] arr = {5, 2, 8, 5, 1, 9, 2, 4, 7, 8, 3, 1, 6, 5, 9, 4, 2, 6, 8, 7};
         boolean[] visited = new boolean[arr.length]; //It creates a boolean array called visited that has the same length as the arr array.

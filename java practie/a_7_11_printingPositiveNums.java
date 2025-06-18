@@ -1,6 +1,6 @@
 // int only the positive numbers from an array
 
-public class a_7_11 {
+public class a_7_11_printingPositiveNums {
     public static void main(String[] args) {
         int[] arr = {-10, 5, 0, -3, 7, -1, 8, -6, 2, -4};
 

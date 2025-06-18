@@ -1,6 +1,6 @@
 // finding the smallest number in the array
 import java.util.*;
-public class a_7_4 {
+public class a_7_4smallestNumInTheArr {
     public static void main(String[] args) {
         
         int[] arr={9,8,5,63,0,9,76,26,97};
