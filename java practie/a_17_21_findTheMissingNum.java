@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class a_18_20_findTheMissingNum {
+public class a_17_21_findTheMissingNum {
     public static void main(String[] args) {
         int[] arr = { 11, 3, 14, 1, 7, 13, 5, 2, 15, 8, 6, 4, 10, 12 };
 
