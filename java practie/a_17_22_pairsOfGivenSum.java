@@ -24,12 +24,16 @@ public class a_17_22_pairsOfGivenSum {
         int[] arr = { 4, 7, 1, 3, 5, 9, 2, 8, 5, 5, 6, 4 };
         int targetSum = 10;
 
-        Arrays.sort(arr);
+        Arrays.sort(arr); // now arr = {1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 8, 9}
+        // for (int i = 0; i < arr.length; i++) {
+        // System.out.print(arr[i]+", ");
+        // }
 
         System.out.println("Unique pairs with sum " + targetSum + ":");
         for (int i = 0; i < arr.length - 1; i++) {
             if (i > 0 && arr[i] == arr[i - 1])
-                continue;
+                continue; // now the arr is = {1, 2, 3, 4, 5, 6, 7, 8}
+            // System.out.print(arr[i]+", ");
 
                     /*
                         for (int i = 1; i <= 5; i++) {
@@ -47,7 +51,7 @@ public class a_17_22_pairsOfGivenSum {
                     continue;
                     
                 if (arr[i] + arr[j] == targetSum) {
-                    System.out.println(arr[i] + " + " + arr[j] + " = " + targetSum);
+                    System.out.println("("+arr[i]+", "+arr[j]+")"+" = "+targetSum);
                 } else if (arr[i] + arr[j] > targetSum) {
                     break;
                 }

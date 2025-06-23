@@ -5,35 +5,37 @@ import java.util.*;
 public class a_0error {
     public static void main(String[] args) {
 
-        int[] arr = { 11, 3, 14, 1, 7, 13, 5, 2, 15, 8, 6, 4, 10, 12 };
-        Arrays.sort(arr);
+        int[] arr = { 4, 7, 1, 3, 5, 9, 2, 8, 5, 5, 6, 4 };
+        int sum = 10;
 
-        int diff = 0;
-        int commonDiff=0;
+        Arrays.sort(arr); // now arr = {1, 2, 3, 4, 4, 5, 5, 5, 6, 7, 8, 9}
+            // for (int i = 0; i < arr.length; i++) {
+            //     System.out.print(arr[i]+", ");
+            // }
 
-        // getting the differences
-        for (int i = 0; i < arr.length - 2; i++) {
-            int d1=arr[i+1] - arr[i];
-            int d2=arr[i+2] - arr[i+1];
-
-            if (d1 == d2) {
-                commonDiff = d1;
-                break;
-            }
-        }
-
-        // output
         for (int i = 0; i < arr.length-1; i++) {
-            diff = arr[i+1] - arr[i];
+            if (i > 0 && arr[i] == arr[i - 1]) continue; // now the loop is arr = {1, 2, 3, 4, 5, 6, 7, 8}
+            // System.out.print(arr[i]+", ");
 
-            if (diff != commonDiff) {
-                int missing = arr[i] + commonDiff;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (j > i + 1 && arr[j] == arr[j - 1])
+                    continue;
+                    
+                if (arr[i] + arr[j] == targetSum) {
+                    System.out.println(arr[i] + " + " + arr[j] + " = " + targetSum);
+                } else if (arr[i] + arr[j] > targetSum) {
+                    break;
+                }
 
-                System.out.println("the missing num is : "+missing);
-                System.out.println("the difference is : "+diff);
-            }
+            for (int j = (i+1); j < arr.length; j++) {
+                
+                if (arr[i] + arr[j] == sum) {
+                    System.out.println("("+arr[i]+", "+arr[j]+")"+" = "+sum);
+                }else if (arr[i]+arr[j] > sum) {
+                    break;
+                } 
 
-        }
-
+            }            
+        }        
     }
 }
