@@ -6,6 +6,26 @@ public class a_7_16_largestAndSecondLargest {
     public static void main(String[] args) {
         int[] arr = { 13, 5, 7, 2, 9, 5, 12, 4, 8, 7, 1, 3, 9, 6, 14, 2, 11, 6, 10, 8 };
 
+        int largest = 0; // using '0' here is not a goood idea, suppose if the arr only holds negative nums in that case this methos will not work
+        int secLargest = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                secLargest = largest;
+                largest = arr[i];
+            }
+        }
+
+        System.out.println(largest);
+        System.out.println(secLargest);
+
+        System.out.println("*************************************************");
+        betterApproach();
+    }
+
+    public static void betterApproach() {
+        int[] arr = { 13, 5, 7, 2, 9, 5, 12, 4, 8, 7, 1, 3, 9, 6, 14, 2, 11, 6, 10, 8 };
+
         // int arr[i] = arr[0];
         int largest = arr[0];
         int secondLargest = arr[0];
