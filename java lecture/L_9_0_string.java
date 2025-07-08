@@ -40,6 +40,37 @@ public class L_9_0_string {
         }else{
             System.out.println("STRINGS ARE NOT EQUAL");
         }
+        System.out.println();
+
+                /*
+                
+                n1 == n2
+
+                    Compares object references (memory addresses), not the actual text inside the strings.
+                    It only returns true if both n1 and n2 refer to the exact same String object in memory.
+
+                    Example:
+                    String a = new String("hello");
+                    String b = new String("hello");
+                    System.out.println(a == b); // false
+
+
+                n1.compareTo(n2) == 0 (or n1.equals(n2))
+
+                    Compares the actual sequence of characters in the strings.
+                    Returns true if the contents (text) of both strings are exactly the same, regardless of whether they are different objects.
+                    
+                    Example:
+                    String a = new String("hello");
+                    String b = new String("hello");
+                    System.out.println(a.equals(b));           // true
+                    System.out.println(a.compareTo(b) == 0);   // true
+
+
+                */
+        
+        // substring
+
 
    }
 }
