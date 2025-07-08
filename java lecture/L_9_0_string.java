@@ -1,8 +1,5 @@
-// learning string
-
-import java.util.*;
 public class L_9_0_string {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         // string declaration
         String name = "Jeet";
         String fullName = "Biswajeet Pradhan";
@@ -70,7 +67,28 @@ public class L_9_0_string {
                 */
         
         // substring
+        // The substring method in Java is used to extract a part (subsequence) of a string, i.e., to get a smaller string from a larger one.
+        String sentence = "My name is Jeet";
+        String nm = sentence.substring(11, sentence.length()); //originalString.substring(startIndex, endIndex);
+            // startIndex (inclusive): the index where the substring starts.
+            // endIndex (exclusive): the index where the substring ends.
+            // it will skip the first 11 index of the string, and from then on it will print till end of the string. Instead of using ".string()" you can use a number also
 
+        String nm2 = sentence.substring(3); // if you dont put any endingIndex then it will by default take the last index as the endingIndex
+        
+        System.err.println(nm);
+        System.err.println(nm2);
+        
 
-   }
+        // STRINGS ARE IMMUTABLE
+        // Once a string is created it's value can't be changed
+        /*
+            String name = "Alice";
+            name = name + " Smith";
+
+            System.out.println(name);
+
+         */
+        
+    }
 }
