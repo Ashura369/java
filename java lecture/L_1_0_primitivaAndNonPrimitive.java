@@ -1,9 +1,9 @@
-public class primitivaAndNonPrimitive {
+public class L_1_0_primitivaAndNonPrimitive {
     public static void main(String[] args) {
         int age = 25; // primitive type (int)
         char grade = 'A'; // primitive type (char)
         boolean isPassed = true; // primitive type (boolean)
-        float temperature = 36.6f; // Note the 'f' at the end
+        float temperature = 36.6f; // Note the 'f' at the end (float)
 
         System.out.println("Age: " + age);
         System.out.println("Grade: " + grade);

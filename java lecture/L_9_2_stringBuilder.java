@@ -3,6 +3,8 @@ public class L_9_2_stringBuilder {
         
         // string builder
 
+        String str = "h";
+
         
 
 
