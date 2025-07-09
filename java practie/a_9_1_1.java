@@ -9,12 +9,33 @@ public class a_9_1_1 {
             char frontChar = sc.charAt(front);
             char backChar = sc.charAt(back);
 
+            sc.setCharAt(front, backChar); // here we are swapping the front character with the backChar
+            sc.setCharAt(back, frontChar);
+        }
+
+        System.out.println(sc);
+        System.out.println();
+        better(); // another way of writing this code
+
+    }
+
+    public static void better() {
+        StringBuilder sc = new StringBuilder("Namaste");
+
+        char frontChar = 0;
+        char backChar = 0;
+
+        for (int i = 0; i < sc.length() / 2; i++) {
+            int front = i;
+            int back = sc.length() - 1 - i;
+
+            frontChar = sc.charAt(front);
+            backChar = sc.charAt(back);
+
             sc.setCharAt(front, backChar);
             sc.setCharAt(back, frontChar);
         }
 
         System.out.println(sc);
-
-
     }
 }

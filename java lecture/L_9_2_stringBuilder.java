@@ -2,14 +2,13 @@ public class L_9_2_stringBuilder {
     public static void main(String[] args) {
         
         // string builder
-
         StringBuilder text = new StringBuilder("Jeet");
         System.out.println(text);
 
         // char at index 0 
         System.out.println(text.charAt(0));
 
-        // set char at index 0
+        // setCharAt index 0
             // this is used to replace the characters
         text.setCharAt(0, 'P'); // KEEP IN MIND THAT YOU CAN ONLY USE '' SINGLE INVERTED COMMA HERE, YOU CAN'T USE DOUBLE INVERTED COMMA ""
         System.out.println(text); // Peet
