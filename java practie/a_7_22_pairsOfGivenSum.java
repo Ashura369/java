@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class a_17_22_pairsOfGivenSum {
+public class a_7_22_pairsOfGivenSum {
     public static void main(String[] args) {
         int[] arr = { 2, 4, 3, 5, 6, -1 };
         int sum = 5;

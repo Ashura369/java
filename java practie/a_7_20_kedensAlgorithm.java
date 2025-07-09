@@ -1,6 +1,6 @@
 // Kedens algorithm - Maximum sum sub array
 
-public class a_17_20_kedensAlgorithm {
+public class a_7_20_kedensAlgorithm {
     public static void main(String[] args) {
         int[] arr = { -5, 4, 6, -3, 4, -1 };
         int crrSum = arr[0]; // -5
