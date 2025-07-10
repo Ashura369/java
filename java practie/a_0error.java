@@ -5,20 +5,13 @@ import java.util.*;
 
 public class a_0error {
     public static void main(String[] args) {
-        StringBuilder sc = new StringBuilder("Namaste");
+        String sc1 = "HELLO THERE";
+        String sc2 = "HII THERE";
 
-        for (int i = 0; i < sc.length() / 2; i++) {
-            int front = i;
-            int back = sc.length() - 1 - i;
-
-            char frontChar = sc.charAt(back);
-            char backChar = sc.charAt(front);
-
-            sc.setCharAt(backChar, frontChar);
+        if (sc1.equalsIgnoreCase(sc2)) {
+            System.out.println("STRINGS ARE EQUAL");
+        }else{
+            System.out.println("STRINGS ARE NOT EQUAL");
         }
-
-        System.out.println(sc);
-        System.out.println();
-    }   
-
+    }
 }
