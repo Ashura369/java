@@ -3,13 +3,11 @@ import java.util.*;
 public class L_0_error {
    
     public static void main(String[] args) {
-        String word = "madam";
-        String reversed = new StringBuilder(word).reverse().toString();
+        int x = 5;
+        int y = 3;
 
-        if (word.equals(reversed)) {
-            System.out.println("PALINDROME");
-        }
-
+        System.out.println(x & y);   // Bitwise AND
+        System.out.println(x > 0 && y > 0);  // Logical AND
     }
     
 }
