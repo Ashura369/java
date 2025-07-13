@@ -10,7 +10,8 @@ public class L_13_0_recursion {
 
     public static void printNum2(int a) {
         // printing nums 1 to 10
-        if (a == 11) {
+        if (a > 10) { 
+            
             return;
         }
 
