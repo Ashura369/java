@@ -1,7 +1,7 @@
 // enter 3 numbers from the user & make a function to print the greatest number
 
 import java.util.*;
-public class a_6_0 {
+public class a_6_0_printingTheGreatestNum {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.err.println("enter 3 numbers : ");

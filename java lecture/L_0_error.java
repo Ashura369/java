@@ -1,19 +1,23 @@
-// dis-sorted and recurring array - fix it
+
 import java.util.*;
 public class L_0_error {
    
     public static void main(String[] args) {
-        // printing the sum of first n natural numbers
-        sum(0, 5, 0);
+        int ans = facto(5);
+        System.out.println(ans);
     }
 
-    public static void sum(int i, int n, int sum) {
-        if (i > n) {
-            System.out.println(sum);
-            return;
+    public static int facto(int n) {
+
+        if (n < 1) {
+            return 1;
         }
-        sum = sum + i;
-        sum(i+1, n, sum);
+        
+        
+        int a = facto(n-1); // by this you are doing two things, you are storing n-1 into a, and also you are calling back the "facto()" with n being a lesser number by 1
+        int result = n * a;
+        
+        return result;
     }
     
 }

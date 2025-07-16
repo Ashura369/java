@@ -1,7 +1,7 @@
 // finding min of three numbers
 import java.util.Scanner;
 
-public class a_6_1 {
+public class a_6_1_minOfThreeNums {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         String ab=process(-5, 0, 1);
