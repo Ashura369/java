@@ -3,22 +3,25 @@ import java.util.*;
 public class L_0_error {
    
     public static void main(String[] args) {
-        int ans = facto(5);
-        System.out.println(ans);
+        // sum of the digits in a num
+        System.out.println(r1(3685));
     }
 
-    public static int facto(int n) {
-
-        if (n < 1) {
-            return 1;
+    public static int r1(int n) {
+        if (n == 0) {
+            return 0;
         }
-        
-        
-        int a = facto(n-1); // by this you are doing two things, you are storing n-1 into a, and also you are calling back the "facto()" with n being a lesser number by 1
-        int result = n * a;
-        
-        return result;
+
+        int lastDigit = n % 10; // will give the remainder (last digit of the num) when it is divided by 10
+        int remaining = n / 10; // will give the division when the num is divided by 10
+
+        // % -- used to get the remainder in the num
+        // / -- used to get the division of the num
+        int ans = lastDigit + r1(remaining);
+        return ans;
+
     }
+    
     
 }
 
