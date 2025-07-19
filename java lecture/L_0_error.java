@@ -8,17 +8,16 @@ public class L_0_error {
     }
 
     public static int r1(int n) {
-        if (n == 0) {
+        if (n < 1) {
             return 0;
         }
 
-        int lastDigit = n % 10; // will give the remainder (last digit of the num) when it is divided by 10
-        int remaining = n / 10; // will give the division when the num is divided by 10
+        int lastDigit = n % 10;
+        int remainingNum = n / 10;
 
-        // % -- used to get the remainder in the num
-        // / -- used to get the division of the num
-        int ans = lastDigit + r1(remaining);
+        int ans = lastDigit + r1(remainingNum);
         return ans;
+
 
     }
     

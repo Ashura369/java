@@ -1,18 +1,22 @@
 public class a_13_6_sumOfDigitsInANum {
     public static void main(String[] args) {
-        // sum of nums 1 to n
-        System.out.println(r1(1, 10));
+        // sum of the digits in a num
+        System.out.println(r1(3685));
     }
 
-    public static int r1(int n, int x) {
-        if (n == x) {
-            return x;
+    public static int r1(int n) {
+        if (n == 0) {
+            return 0;
         }
 
-        int a = r1(n+1, x);
-        int sum = n + a;
-        return sum;
+        int lastDigit = n % 10; // will give the remainder (last digit of the num) when it is divided by 10
+        int remaining = n / 10; // will give the division when the num is divided by 10
 
+        // % -- used to get the remainder in the num
+        // / -- used to get the division of the num
+        int ans = lastDigit + r1(remaining);
+        return ans;
 
     }
+    
 }
