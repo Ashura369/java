@@ -19,13 +19,13 @@ public class a_13_9_towerOfHanoi {
 
     public static void hanoi(int n, char a, char b, char c) {
         if (n == 1) {
-            System.out.println("Transfer disk"+ n +" from "+ a +" to "+ c);
+            System.out.println("Transfer disk "+ n +" from "+ a +" to "+ c);
             return;
         }
         
-        hanoi(n-1, a, c, b);
-        System.out.println("Transfer disk"+ n +" from "+ a +" to "+ c);
-        hanoi(n-1, b, a, c);
+        hanoi(n-1, a, c, b); // move n-1 disks from a to b using c
+        System.out.println("Transfer disk "+ n +" from "+ a +" to "+ c); // move nth disk to destination
+        hanoi(n-1, b, a, c); // move n-1 disks from b to c using a
 
         /*
         When we say "n - 1 disks", we mean all the disks except the largest one (the nth one).
