@@ -24,7 +24,7 @@ public class a_13_12_0_firstAndLastOccuranceOfAnElement {
             last = idx;
         }
 
-        r1 (ltrs, idx + 1, target, first, last);
+        r1(ltrs, idx + 1, target, first, last);
     }
 
     public static void r2(String ltrs, int idx, char target, int first, int last) {
@@ -38,13 +38,11 @@ public class a_13_12_0_firstAndLastOccuranceOfAnElement {
         if (currCharacter == target) {
             if (first == -1) {
                 first = idx;
-            }else{
+            } else {
                 last = idx;
             }
         }
 
-        r2(ltrs, idx+1, target, first, last);
+        r2(ltrs, idx + 1, target, first, last);
     }
 }
-
-
