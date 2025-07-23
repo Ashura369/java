@@ -5,34 +5,35 @@ import java.util.*;
 
 public class a_0error {
     public static void main(String[] args) {
-        String ltrs = "abcdalfgaahhiseao";
+    
+        String str = "jdanvabcababuuaabuabmh";
         char target = 'a';
-        r1(ltrs, 0, target, -1, -1, -1, -1, 0);
+        r1(str, target, 0, -1, -1, -1, -1, 0);
     }
-    public static void r1(String ltrs, int idx, char target, int first, int secA, int last, int secLast, int count) {
-        
-        // print the second occurance of a, and the second last occurance of a
-        if (idx == ltrs.length()) {
+
+    public static void r1(String str, char target, int idx, int first, int secFirst, int last, int secLast, int count) {
+        if (idx == str.length()) {
             System.out.println("First occurrence of 'a': " + first);
-            System.out.println("Second occurrence of 'a': " + secA);
+            System.out.println("Second occurrence of 'a': " + secFirst);
             System.out.println("Second last occurrence of 'a': " + secLast);
             System.out.println("Last occurrence of 'a': " + last);
             return;
         }
 
-        char crrChar = ltrs.charAt(idx);
+        char crrChar = str.charAt(idx);
         if (crrChar == target) {
-            count++; // increase count each time we see 'a'
+            count++;
             if (count == 1) {
                 first = idx;
             }else if(count == 2){
-                secA = idx;
+                secFirst = idx;
             }
 
             secLast = last;
             last = idx;
         }
 
-        r1(ltrs, idx + 1, target, first, secA, secLast, last, count);
+
+        r1(str, target, idx+1, first, secFirst, last, secLast, count);
     }
 }
