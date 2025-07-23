@@ -1,9 +1,6 @@
-// fixing disorted and recurring arr
+// print the second occurance of a, and the second last occurance of a
 
-
-import java.util.*;
-
-public class a_0error {
+public class a_13_12_1_secondAndSecondLast {
     public static void main(String[] args) {
         String ltrs = "abcdalfgaahhiseao";
         char target = 'a';
@@ -11,7 +8,6 @@ public class a_0error {
     }
     public static void r1(String ltrs, int idx, char target, int first, int secA, int last, int secLast, int count) {
         
-        // print the second occurance of a, and the second last occurance of a
         if (idx == ltrs.length()) {
             System.out.println("First occurrence of 'a': " + first);
             System.out.println("Second occurrence of 'a': " + secA);
