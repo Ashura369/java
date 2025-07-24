@@ -1,6 +1,6 @@
 // printing the string in reverse
 
-public class a_13_10_printingStringInReverse {
+public class a_13_10_0_printingStringInReverse {
     public static void main(String[] args) {
         String str = "abcd";
         int idx = str.length()-1;
