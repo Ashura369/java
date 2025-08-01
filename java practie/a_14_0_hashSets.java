@@ -1,6 +1,7 @@
-// remove the duplicates
-import java.util.*;
-public class a_0error {
+import java.util.HashSet;
+import java.util.Set;
+
+public class a_14_0_hashSets {
     public static void main(String[] args) {
         String str = "abbccddeccebbeaaa";
         StringBuilder sb = new StringBuilder();
