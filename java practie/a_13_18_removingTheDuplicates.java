@@ -40,12 +40,15 @@ public class a_13_18_removingTheDuplicates {
         }
 
         char crrChar = str.charAt(idx);
-        if (map[crrChar - 'a'] == true) {
+        if (map[crrChar - 'a'] == true) { 
             r1(str, idx+1, newString);
         }else{
             newString += crrChar;
             map[crrChar - 'a'] = true;
             r1(str, idx+1, newString);
         }
+
+        //  This might seem strange at first, but in Java (and most programming languages), characters (char) are actually numeric types under the hood — they represent Unicode (or ASCII) values.
+        // that means if i minus a from z i will get 25, and if i do vice versa i will get -25
     }
 }
