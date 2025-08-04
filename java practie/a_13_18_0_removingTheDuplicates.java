@@ -6,6 +6,7 @@ public class a_13_18_0_removingTheDuplicates {
         StringBuilder result = new StringBuilder();
         HashSet<Character> seen = new HashSet<>();
         removeDuplicates(str, 0, seen, result);
+        System.out.println(result.toString());
 
         // ****************************************************
         // Another method of solving the qs
