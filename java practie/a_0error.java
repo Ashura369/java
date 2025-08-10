@@ -7,7 +7,7 @@ public class a_0error {
 
     public static void main(String[] args) {
 
-        int[][] board = new int[N][N]; 
+        int[][] board = new int[N][N]; // the board here is an array
 
         solveNQueens(board, 0);
     }
@@ -24,18 +24,22 @@ public class a_0error {
 
     // checking if the queen's position is safe or not
     static boolean isSafe(int[][] board, int row, int col) {
+
+        // 1st loop — checking the same column above the current row
         for (int i = 0; i < row; i++) {
             if (board[i][col] == 1) { //  if there’s already a queen in the same column above the current row, return false     // when row = 0, this code doesn't run at all (neither of the loop in this function will run when row = 0)
                 return false;   // the loop will run until it finds a position where it finds the queen, once it finds the queen it will return false, if it doesn't find any queen then the loop will end when it reaches i < row and then it will start running the next line of loops below it
             }
         }
 
+        // 2nd loop — checking the upper-left diagonal
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 1) {
                 return false;
             }
         }
 
+        // 3rd loop — checking the upper-right diagonal
         for (int i = row - 1, j = col + 1; i >= 0 && j < N; i--, j++) {
             if (board[i][j] == 1) {
                 return false;
@@ -53,6 +57,7 @@ public class a_0error {
             return;
         }
 
+        // It tries all possible column positions for the queen in the current row.
         for (int col = 0; col < N; col++) {
             if (isSafe(board, row, col)) { // if isSafe function doesn't return "true" then the code below will not run, this is bcoz in the isSafe function the code is returning true. So returning true is like a condition here
                 board[row][col] = 1;
