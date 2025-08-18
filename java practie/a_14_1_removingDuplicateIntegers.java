@@ -2,7 +2,7 @@
 
 
 import java.util.*;
-public class a_14_1_remocingDuplicateIntegers {
+public class a_14_1_removingDuplicateIntegers {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 3, 5, 1, 6};
         HashSet<Integer> num = new HashSet<>();

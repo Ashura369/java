@@ -26,7 +26,7 @@ public class a_13_9_towerOfHanoi {
         hanoi(n-1, a, c, b); // move n-1 disks from a to b using c
         System.out.println("Transfer disk "+ n +" from "+ a +" to "+ c); // move nth disk to destination
         hanoi(n-1, b, a, c); // move n-1 disks from b to c using a
-
+        return;
         /*
         When we say "n - 1 disks", we mean all the disks except the largest one (the nth one).
 

@@ -1,4 +1,4 @@
-public class a_15_1_nQueens {
+public class a_15_2_nQueens {
     // it will be a N x N chessboard
     // N will be given in the qs
         // N = 4
@@ -58,7 +58,7 @@ public class a_15_1_nQueens {
 
     static void solveNQueens(int[][] board, int row) {
         if (row == N) {
-            printBoard(board); 
+            printBoard(board);
             System.out.println();
             return;
         }
