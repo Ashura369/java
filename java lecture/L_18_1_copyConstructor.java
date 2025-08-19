@@ -1,49 +1,37 @@
-class amazon{
+// copy constructor
+
+class person {
     String name;
-    int id;
+    int age;
 
-    amazon(String name, int id) {
-        this.name=name;
-        this.id=id;
+    person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
-    void print(){
-        System.out.println("Name : "+name+" ID : "+id);
-    }
-}
-
-class flipKart{
-    String name;
-    int id;
-
-    flipKart(String name, int id) {
-        this.name=name;
-        this.id=id;
+    person(person p1){ // here we passed one object of its own type // here instead of p1 you can write whatever name you want, its just a parameter for p2 in the main
+        this.name = p1.name;
+        this.age = p1.age;
     }
 
-    void print(){
-        System.out.println("Name : "+name+" ID : "+id);
+    void printDetails(){
+        System.err.println("Name: "+name+", Age: "+age);
     }
 }
 
 
 public class L_18_1_copyConstructor {
     public static void main(String[] args) {
-        // amazon
-        amazon a1 = new amazon("a", 1);
-        a1.print();
-        amazon a2 = new amazon("b", 2);
-        a2.print();
-        amazon a3 = new amazon("c", 3);
-        a3.print();
+        person p1 = new person("Alice", 25);
+        System.err.println("Original Person : ");
+        p1.printDetails();
 
-        // flipKart
-        System.out.println();
-        flipKart f1 = new flipKart("d", 4);
-        f1.print();
-        flipKart f2 = new flipKart("e", 5);
-        f2.print();
-        flipKart f3 = new flipKart("f", 6);
-        f3.print();
+        System.err.println();
+        person p2 = new person(p1); // when you run this the person function will be called where inside of it another person object has been passsed
+        System.err.println("Copied Person : ");
+        p2.printDetails();
+
+
+
     }
 }

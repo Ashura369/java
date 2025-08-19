@@ -1,36 +1,34 @@
+class student{
+    String name;
+    int age;
+
+    // student(String name, int age){
+    //     this.name = name;
+    //     this.age = age;
+    // }
+
+    void printInfo1(){
+        System.out.println(name);
+        System.out.println(age);
+    }
+    void printInfo(){
+        System.out.println("The name is "+name+", and age is "+age);
+    }
+}
+
+
+
 public class a_0error {
     // printing second and second last 
 
     public static void main(String[] args) {
-        // int x = 0;
-        int[] arr = {1,3,6,2,4,2,5,9};
-        
-    }
 
-    public static void r1(String n, int idx, char target, int count, int first, int secF, int secL, int last) {
-       if (idx == n.length()) {
-            System.out.println(first);
-            System.out.println(secF);
-            System.out.println(secL);
-            System.out.println(last);
-            return;
-       }
-
-        if (n.charAt(idx) == target) {
-            count ++;
-            if (count == 1) {
-                first = idx;
-            } else if (count == 2) {
-                secF = idx;
-            }
-
-            secL = last;
-            last = idx;
-        }
-
-        r1(n, idx+1, target, count, first, secF, secL, last);
+        // student s1 = new student("Ashura", 21);
+        // s1.printInfo();
+        student s2 = new student();
+        s2.name = "Pink";
+        s2.age = 22;
+        s2.printInfo1();
 
     }
-
-        
 }
