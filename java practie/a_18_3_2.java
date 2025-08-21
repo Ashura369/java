@@ -32,15 +32,13 @@ class parent extends grandParent{
         super(name, p.title, g.gender, age);
     }
 
-
-
     void print(){
         System.out.println("The name is "+name+" "+title+", who is a "+gender+" with "+age+" year old.");
     }
 }
 
 
-public class a_0error {
+public class a_18_3_2 {
     // printing second and second last 
 
     public static void main(String[] args) {
@@ -57,7 +55,5 @@ public class a_0error {
         p1.print();
         parent p2 = new parent(p1, g2, "Rashmi", 52); // inheriting title from p1, and gender form g2
         p2.print();
-        
-        
     }
 }
