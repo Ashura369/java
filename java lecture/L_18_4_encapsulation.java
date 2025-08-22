@@ -7,7 +7,7 @@ class human{
     private String name = "Mohan";
 
     public void print() {
-        System.out.println(name+" "+age);
+        System.out.println(age+" "+name);
     }
 
     // in the above example we have made the variables private and assigned values into it, and also at the same time made  a print function which is "public" so that we can acces it from main function
