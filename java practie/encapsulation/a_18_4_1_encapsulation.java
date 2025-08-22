@@ -1,6 +1,6 @@
-package folder;
+package encapsulation;
 
-public class person {
+class person {
 
     String name;
     int age;
@@ -21,8 +21,8 @@ public class person {
 }
 
 
-// public class folder{
-//     public static void main(String[] args) {
+public class a_18_4_1_encapsulation{
+    public static void main(String[] args) {
     
-//     }
-// }
+    }
+}
