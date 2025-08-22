@@ -23,7 +23,7 @@ class grandParent{
     }
 }
 
-class parent extends grandParent{
+class parent extends grandParent {
     parent(grandParent g, String name, String gender, int age){
         super(name, g.title, gender, age);
     }
