@@ -4,12 +4,16 @@ class person {
     String name;
     int age;
 
+    person(){
+        System.out.println("WELCOME TO CONSTRUCTOR");
+    }
+
     person(String name, int age){
         this.name = name;
         this.age = age;
     }
 
-    person(person a){ // here we passed one object of its own type // here instead of p1 you can write whatever name you want, its just a parameter for p2 in the main
+    person(person a){ // here we passed one object of its own type // here you can write whatever name you want, its just a parameter for p2 in the main
         this.name = a.name;
         this.age = a.age;
     }
@@ -19,9 +23,21 @@ class person {
     }
 }
 
+class man extends person{
+    man(){
+        System.out.println("HII THIS IS A MAN");
+    }
+}
+class woman extends person{
+    woman(){
+        System.out.println("HII THIS IS A WOMAN");
+    }
+}
+
 
 public class L_18_1_copyConstructor {
     public static void main(String[] args) {
+        
         person p1 = new person("Alice", 25);
         System.out.println("Original Person : ");
         p1.printDetails();
@@ -40,7 +56,12 @@ public class L_18_1_copyConstructor {
         person p4 = new person(p3);
         System.out.println("Copied Person : ");
         p4.printDetails();
-
+        
+        System.out.println();
+        man m1 = new man(); // when you call "man", automatically "person" constructor will be called.
+        
+        System.out.println();
+        woman w1 = new woman(); // same goes with the woman constructor
 
     }
 }

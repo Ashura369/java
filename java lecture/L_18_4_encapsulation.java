@@ -6,6 +6,10 @@ class human{
     private int age = 11;
     private String name = "Mohan";
 
+    void changeAge(int age){ // this is how you can change a private variable by making a method
+        this.age = 22;
+    }
+
     public void print() {
         System.out.println(age+" "+name);
     }
@@ -46,8 +50,10 @@ public class L_18_4_encapsulation {
         human h1 = new human();
         // h1.age = 11;
         // h1.name = "Mohan";
-
         h1.print();
+        h1.changeAge(22); // here we changed age
+        h1.print();
+        
 
         System.out.println("*************************************");
         human2 h2_1 = new human2();

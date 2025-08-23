@@ -7,7 +7,7 @@ class employee{
     String empNum;
     String company;
 
-    employee() {
+    employee() { // this is a constructor, not a method / function
         System.out.println("CONSTRUCTER CALLED ");
     }
 
@@ -39,11 +39,11 @@ class students {
     int clss;
     String gender;
 
-    students(String a, int b, int c, String d){
-        this.name = a;
-        this.rollNo = b;
-        this.clss = c;
-        this.gender = d;
+    students(String nm, int rln, int cls, String gndr){
+        this.name = nm;
+        this.rollNo = rln;
+        this.clss = cls;
+        this.gender = gndr;
     }
 
     public void printDetails() {
