@@ -9,7 +9,7 @@ interface Pet {
 }
 
 // Dog class implements both interfaces
-class Dog implements Animal, Pet {
+class Dog implements Animal, Pet { // KEEP IN MIND THAT EVERY METHOD DECLARED INSIDE THE interface CLASS MUST BE DELCARED INSIDE THE CLASS THAT implements IT
     public void eat() {
         System.out.println("Dog eats food");
     }
