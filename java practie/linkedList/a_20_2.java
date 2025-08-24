@@ -6,6 +6,7 @@ class node{
         node(String data){
             this.data = data;
             this.next = null;
+            // ❌ size++;   // ERROR: size belongs to linkList, not node
         }
     }
 
@@ -17,32 +18,40 @@ class node{
     // below the example of how its done, if you want to use the below then uncomment it an put comment on all that is inside the a_20_2
 
     class linkList{
-        node head; // head = at the beginning
+        node head; // as head is not assigned anything here, so it automatically becomes "null"
+        private int size;
+
+        linkList(){
+           this.size = 0;
+        }
+
 
         // add first
         void addFirst(String data){
-            node newNode = new node(data);
+            node crrElement = new node(data);
+            size++;
             if(head == null){
-                head = newNode;
+                head = crrElement;
                 return;
             }
-            newNode.next = head;
-            head = newNode;
+            crrElement.next = head;    
+            head = crrElement;         
         }
 
         // add last
         void addLast(String data){
-            node newNode = new node(data);
+            node crrElement = new node(data);
+            size++;
             if (head == null) {
-                head = newNode;
+                head = crrElement;
                 return;
             }
 
-            node currNode = head;
-            while (currNode.next != null){
-                currNode = currNode.next;
+            node newElement = head;
+            while (newElement.next != null){
+                newElement = newElement.next;
             }
-            currNode.next = newNode;
+            newElement.next = crrElement;
         }
 
         void printList(){
@@ -50,12 +59,52 @@ class node{
                 System.out.println("list is empty");
                 return;
             }
-            node currNode = head;
-            while (currNode != null){
-                System.out.print(currNode.data + " --> ");
-                currNode = currNode.next;
+            node newElement = head;
+            while (newElement != null){
+                System.out.print(newElement.data + " --> ");
+                newElement = newElement.next;
             }
             System.out.println("Null");
+        }
+
+        // delete  first
+        void deleteFirst(){
+            if (head == null) {
+                System.out.println("The list is empty");
+                return;
+            }
+            size--;
+            head = head.next;
+        }
+
+        // delete last
+        void deleteLast() {
+            if (head == null) {
+                System.out.println("The list is empty");
+                return;
+            }
+
+            size--;  // decrease size
+
+            if (head.next == null) {
+                head = null;
+                return;
+            }
+
+            node secondLast = head;
+            node lastNode = head.next;
+
+            while (lastNode.next != null) {
+                lastNode = lastNode.next;
+                secondLast = secondLast.next;
+            }
+
+            secondLast.next = null;
+        }
+
+        // return current size
+        int size() {
+            return size;
         }
     }
 
@@ -66,28 +115,28 @@ public class a_20_2 {
 
     // // add first
     // void addFirst(String data){
-    //     node newNode = new node(data);
+    //     node a = new node(data);
     //     if(head == null){
-    //         head = newNode;
+    //         head = a;
     //         return;
     //     }
-    //     newNode.next = head;
-    //     head = newNode;
+    //     a.next = head;
+    //     head = a;
     // }
 
     // // add last
     // void addLast(String data){
-    //     node newNode = new node(data);
+    //     node a = new node(data);
     //     if (head == null) {
-    //         head = newNode;
+    //         head = a;
     //         return;
     //     }
 
-    //     node currNode = head;
-    //     while (currNode.next != null){
-    //         currNode = currNode.next;
+    //     node b = head;
+    //     while (b.next != null){
+    //         b = b.next;
     //     }
-    //     currNode.next = newNode;
+    //     b.next = a;
     // }
 
     // void printList(){
@@ -95,10 +144,10 @@ public class a_20_2 {
     //         System.out.println("list is empty");
     //         return;
     //     }
-    //     node currNode = head;
-    //     while (currNode != null){
-    //         System.out.print(currNode.data + " --> ");
-    //         currNode = currNode.next;
+    //     node b = head;
+    //     while (b != null){
+    //         System.out.print(b.data + " --> ");
+    //         b = b.next;
     //     }
     //     System.out.println("Null");
     // }

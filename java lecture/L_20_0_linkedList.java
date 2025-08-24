@@ -19,9 +19,16 @@ public class L_20_0_linkedList {
         System.out.println("After adding first & last: " + names);
         System.out.println("******************************************");
 
-        // Accessing elements
+        // Accessing elements (from index to elements)
+        System.out.println("Third element : "+names.get(3));
         System.out.println("First Element: " + names.getFirst());
         System.out.println("Last Element: " + names.getLast());
+        System.out.println("******************************************");
+        
+        // Accessing index (from elements to index)
+        System.out.println("Index of Charlie : "+names.indexOf("Charlie"));
+        System.out.println("Index of first element : "+names.indexOf(names.getFirst()));
+        System.out.println("Index of last element : "+names.indexOf(names.getLast()));
         System.out.println("******************************************");
 
         // Removing elements
