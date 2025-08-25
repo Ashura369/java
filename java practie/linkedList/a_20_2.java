@@ -59,6 +59,7 @@ class node{
                 System.out.println("list is empty");
                 return;
             }
+            
             node newElement = head;
             while (newElement != null){
                 System.out.print(newElement.data + " --> ");
