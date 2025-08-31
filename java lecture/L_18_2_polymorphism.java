@@ -50,6 +50,9 @@ public class L_18_2_polymorphism {
         s1.printInfo(25);                
         s1.printInfo(s1.age);            
         s1.printInfo();                  
-        s1.printInfo(s1.name, s1.age);    
+        s1.printInfo(s1.name, s1.age);
+        s1.name = "Aman";
+        s1.age = 23;
+        s1.printInfo();  
     }
 }

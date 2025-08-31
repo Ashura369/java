@@ -39,11 +39,11 @@ class students {
     int clss;
     String gender;
 
-    students(String nm, int rln, int cls, String gndr){
-        this.name = nm;
-        this.rollNo = rln;
-        this.clss = cls;
-        this.gender = gndr;
+    students(String name, int rollNo, int clss, String gender){
+        this.name = name;
+        this.rollNo = rollNo;
+        this.clss = clss;
+        this.gender = gender;
     }
 
     public void printDetails() {
@@ -83,7 +83,7 @@ public class L_18_0_OOPS {
 
 public static void main(String[] args) {
 
-    employee emp1 = new employee(); // this "new employee()" are calleda as constructors        
+    employee emp1 = new employee(); // this "new employee()" are called as constructors        
     
     emp1.name = "Biswajeet Pradhan"; 
     emp1.empNum = "abc123";

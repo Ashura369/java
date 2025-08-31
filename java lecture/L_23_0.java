@@ -5,7 +5,16 @@ import java.util.LinkedHashMap;
 import  java.util.Set;
 import java.util.TreeMap;
 
+class p{
+    static String printStar(){
+        return "************************************";
+    }
+}
+
+
 public class L_23_0{
+    
+
     public static void main(String[] args) {
         HashMap<String, Integer> map = new HashMap<>();
 
@@ -49,6 +58,8 @@ public class L_23_0{
         System.out.println(map.get("Indonesia"));
         System.out.println(map.get(100));       // doesn't work on values
         System.out.println("************************************");
+
+
         
         // iterating through each element - for this you have to use forEach loop
         for (HashMap.Entry<String, Integer> e: map.entrySet()) {
@@ -108,6 +119,8 @@ public class L_23_0{
             System.out.println(b+", "+map3.get(b));
         }
         System.out.println("************************************");
+        System.out.println(p.printStar());
+        System.out.println(p.printStar());
         
     }
 }

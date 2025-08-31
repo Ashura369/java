@@ -28,6 +28,7 @@ class man extends person{
         System.out.println("HII THIS IS A MAN");
     }
 }
+
 class woman extends person{
     woman(){
         System.out.println("HII THIS IS A WOMAN");
@@ -37,6 +38,8 @@ class woman extends person{
 
 public class L_18_1_copyConstructor {
     public static void main(String[] args) {
+
+        person p0 = new person();
         
         person p1 = new person("Alice", 25);
         System.out.println("Original Person : ");
@@ -59,6 +62,9 @@ public class L_18_1_copyConstructor {
         
         System.out.println();
         man m1 = new man(); // when you call "man", automatically "person" constructor will be called.
+        m1.name = "Ravi";   // here we were able to assign name and age bcoz class "man" inherits person class
+        m1.age = 28;
+        m1.printDetails();
         
         System.out.println();
         woman w1 = new woman(); // same goes with the woman constructor
