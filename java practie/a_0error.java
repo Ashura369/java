@@ -16,7 +16,7 @@ class Student{
     // making a link list for student class
     Student head;
     
-    void add(String name, int rollNo, int standard){
+    void addFirst(String name, int rollNo, int standard){
         if (head == null) {
 
             /*
@@ -37,17 +37,25 @@ class Student{
             */
 
             head = new Student(name, rollNo, standard);     // to solve the problelm you have to write this
+            return; // ✅ added return to stop further execution
         }
-        Student temp = head;
-        while (temp != null) {
-            temp = temp.next;
-        }
-        temp.next = new Student(name, rollNo, standard);
-
+        Student temp = new Student(name, rollNo, standard);
+        temp.next = head;
+        head = temp;
+        
     }
     
     void print(){
         System.out.println("Name: "+name+", Roll.No.: "+rollNo+", Class: "+standard);
+    }
+
+    void printAll(){
+        Student temp = head;
+        while (temp != null) {
+            System.out.println("Name: "+temp.name+", Roll.No.: "+temp.rollNo+", Class: "+temp.standard);
+
+            temp = temp.next;
+        }
     }
 
     static class GoodStudents extends Student{
@@ -95,8 +103,10 @@ public class a_0error {
         System.out.println("Name: "+s1.name);
 
         Student s2 = new Student("Biswajeet Pradhan", 33, 10);
-        s2.add("Ravi Sharma", 33, 10);
         s2.print();
+        s2.addFirst("Ravi Sharma", 33, 10);
+        s2.printAll();
+        System.out.println("*****************************************************");
 
         // ************************************************************************
         

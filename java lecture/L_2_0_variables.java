@@ -20,6 +20,7 @@
 
  */
 
+
 public class L_2_0_variables {
     public static void main(String[] args) {
         String userName = "coderJeet"; //to use strings you always have to write the text within "", if you use '', then it will not work
@@ -32,5 +33,6 @@ public class L_2_0_variables {
         //they are declared but not being used
 
         System.out.println(userName);
+        
     }
 }

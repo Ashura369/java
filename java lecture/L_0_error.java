@@ -2,7 +2,7 @@
 import java.util.*;
 public class L_0_error {
     static final int N = 4;
-    // nwiuyefdcguhijoskasjfh
+    
     public static void main(String[] args) {
         int[][] board = new int[N][N];
         solveNQueens(board, 0);
