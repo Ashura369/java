@@ -1,7 +1,10 @@
 // learning abstraction
+
+// "abstract" can only be applied to the classes and method (and also to inner classes in some cases)
+
 // When you declare a class or method as abstract, it means it serves only as a blueprint for other classes or methods. You can inherit and implement its features, but you cannot instantiate or use it directly.
 
-// if you write private in the animal class, you will not be inherit any values from it, but if you write abstract, you wil be able to inherit values
+// if you write private in the animal class (PRIVATE KEYWORD DOESN'T WORK ON THE CLASSES), you will not be inherit any values from it, but if you write abstract, you wil be able to inherit values
 
 abstract class animal { // just try to write private in place of abstract here, and you will be able to see the exact difference btwn abstraction and (data hinding) private
 

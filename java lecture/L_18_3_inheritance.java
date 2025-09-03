@@ -19,6 +19,8 @@ class parent{
 class child extends parent{
     child(String name, int age){ 
         super(name, age);        // super is a reference keyword in Java that is used inside a child (subclass) to directly refer to its parent (superclass).
+
+        // "super" can only be used inside a constructor, not inside a method
     }
 
         /*

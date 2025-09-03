@@ -121,7 +121,7 @@ class Student{
 }
 
 
-public class a_0error {
+public class a_20_1 {
     public static void main(String[] args) {
         System.out.println();
         
