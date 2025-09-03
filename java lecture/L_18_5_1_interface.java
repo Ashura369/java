@@ -22,5 +22,6 @@ interface animal { // when using interface you can't write (interface class anim
 public class L_18_5_1_interface {
     public static void main(String[] args) {
         animal a1 = new animal();
+        
     }
 }
