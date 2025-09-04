@@ -12,7 +12,7 @@ class p{
 }
 
 
-public class L_23_0{
+public class L_23_0_hashMap{
     
 
     public static void main(String[] args) {
@@ -54,11 +54,14 @@ public class L_23_0{
         System.out.println("************************************");
         
         // get - to get the value of a specific key        
-        System.out.println(map.get("India"));   // it will print the value of India
-        System.out.println(map.get("Indonesia"));
-        System.out.println(map.get(100));       // doesn't work on values
+        System.out.println(map.get("India"));       // it will print the value of India
+        System.out.println(map.get("Indonesia"));   // will print null
+        System.out.println(map.get(100));           // doesn't work on values
         System.out.println("************************************");
-
+        
+        // entrySet() - entrySet() is a method that returns a Set view of all the entries in the map.
+        System.out.println("entrySet: "+map.entrySet());
+        System.out.println("************************************");
 
         
         // iterating through each element - for this you have to use forEach loop
@@ -68,7 +71,7 @@ public class L_23_0{
         System.out.println("************************************");
         
         // iterating through each element - using set
-        Set<String> keys = map.keySet();            // to use Set here you have to import it first, then you will be able to use it
+        Set<String> keys = map.keySet();                // to use Set here you have to import it first, then you will be able to use it
         for (String key : keys) {
             System.out.println(key+": "+map.get(key));
         }

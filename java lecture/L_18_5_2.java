@@ -1,5 +1,3 @@
-
-
 interface Animal {
     int age = 5; // if you declare any variable here, it will always be same. You will never be able to change it
     void walk();  // abstract method (by default: public + abstract) // KEEP IN MIND THAT WHEN YOU ARE USING interface YOU CAN'T DECLARE THE BODY

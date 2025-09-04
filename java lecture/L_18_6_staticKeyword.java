@@ -21,7 +21,7 @@ public class L_18_6_staticKeyword {
         s1.changeSchool();                                      // here we changed the school name
         System.out.println(s1.school);
         s1.changeSchool2("St. Joseph School of Royals");    // here we again changed the school name
-        System.out.println(s1.school);        
+        System.out.println(s1.school);
 
     }
 }

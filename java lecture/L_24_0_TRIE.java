@@ -1,3 +1,8 @@
+// learning TRIE
+
+// remember when you are a class as static you can never declare a top class static, static can only be applied to nested classes or sub-classes 
+
+
 public class L_24_0_TRIE {
     
     static class Node {

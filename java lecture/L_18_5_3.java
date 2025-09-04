@@ -24,5 +24,9 @@ public class L_18_5_3 {
         Dog d = new Dog();
         d.eat();
         d.play();
+        
+        Animal a = new Dog();
+        a.eat();        // it can only implement the play() mehtod bcoz this is the only method declared inside the Animal interface, regardless the "a" object being formed inside the Dog class
+
     }
 }

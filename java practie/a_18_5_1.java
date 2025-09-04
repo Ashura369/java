@@ -97,7 +97,7 @@ class Human extends Animal implements Methods {
     }
 }
 
-public class a_0error {
+public class a_18_5_1 {
     public static void main(String[] args) {
         Species s = new Species("Mammal", "Lion", 4, 10);
         s.add("Mammal", "Tiger", 4, 8);
