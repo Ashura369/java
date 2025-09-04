@@ -1,10 +1,5 @@
-// learning TRIE
+public class L_24_3_wordBreakProblem {
 
-// remember when you are a class as static you can never declare a top class static, static can only be applied to nested classes or sub-classes 
-
-
-public class L_24_0_TRIE {
-    
     static class Node {
         Node[] children;
         boolean end; // marks end of a word
@@ -19,7 +14,8 @@ public class L_24_0_TRIE {
 
     // Insert a word
     public static void insert(String word) {
-        Node curr = root;  // keep root fixed
+        word = word.toLowerCase();  // ensure lowercase
+        Node curr = root;
         for (int i = 0; i < word.length(); i++) {
             int idx = word.charAt(i) - 'a';
 
@@ -37,7 +33,8 @@ public class L_24_0_TRIE {
 
     // Search a word
     public static boolean search(String key) {
-        Node curr = root;  // keep root fixed
+        key = key.toLowerCase();
+        Node curr = root;
         for (int i = 0; i < key.length(); i++) {
             int idx = key.charAt(i) - 'a';
             Node node = curr.children[idx];
@@ -46,7 +43,7 @@ public class L_24_0_TRIE {
                 return false;
             }
 
-            if (i == (key.length() - 1) &&  !node.end) {
+            if (i == (key.length() - 1) && !node.end) {
                 return false;
             }
 
@@ -55,16 +52,31 @@ public class L_24_0_TRIE {
         return true;
     }
 
-    public static void main(String[] args) {
-        String words[] = {"the", "a", "there", "their", "any"};
+    // Word Break Problem
+    public static boolean wordBreak(String key) {
+        if (key.length() == 0) {
+            return true;
+        }
 
-        for (int i = 0; i < words.length; i++) {
+        for (int i = 1; i <= key.length(); i++) {
+            String firstPart = key.substring(0, i);
+            String secPart = key.substring(i);
+
+            if (search(firstPart) && wordBreak(secPart)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        String words[] = {"i", "like", "sam", "samsung", "mobile"};
+        String key = "ilikesamsung";
+
+        for (int i = 0; i < words.length; i++) {   // ✅ fixed loop
             insert(words[i]);
         }
 
-        System.out.println(search("their")); // true
-        System.out.println(search("thor"));  // false
-        System.out.println(search("an"));    // false
-
+        System.out.println(wordBreak(key));  // expected output: true
     }
 }

@@ -79,7 +79,7 @@ class students {
 
 
 
-public class L_18_0_OOPS {
+public class L_18_0_0_OOPS {
 
 public static void main(String[] args) {
 
