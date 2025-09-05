@@ -72,11 +72,15 @@ public class L_24_3_wordBreakProblem {
     public static void main(String[] args) {
         String words[] = {"i", "like", "sam", "samsung", "mobile"};
         String key = "ilikesamsung";
+        String key2 = "ilikesung";
+        String key3 = "ilikesam";
 
         for (int i = 0; i < words.length; i++) {   // ✅ fixed loop
             insert(words[i]);
         }
 
         System.out.println(wordBreak(key));  // expected output: true
+        System.out.println(wordBreak(key2));
+        System.out.println(wordBreak(key3));    
     }
 }
